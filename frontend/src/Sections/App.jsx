@@ -26,7 +26,7 @@ function App() {
 
         <AppRouter />
 
-        <Box className={sty.textColor}>{import.meta.env.VITE_APP_URL}</Box>
+        <Box className={sty.textColor}>{"hello "+import.meta.env.VITE_APP_URL}</Box>
       </AppProvider>
     </Box>
   );
