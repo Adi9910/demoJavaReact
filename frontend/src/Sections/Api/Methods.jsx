@@ -2,7 +2,7 @@ import axios from "axios";
 
 const API_BASE_URL = import.meta.env.VITE_APP_URL; // Adjust the base URL as needed
 
-const getData = (url: string) => {
+const getData = (url) => {
   return new Promise(async (resolve) => {
     try {
       const response = await axios.get(API_BASE_URL + url);
@@ -13,7 +13,7 @@ const getData = (url: string) => {
   });
 };
 
-const postData = (url: string, data: any) => {
+const postData = (url, data) => {
   return new Promise(async (resolve) => {
     try {
       const response = await axios.post(API_BASE_URL + url, data, {
@@ -28,7 +28,7 @@ const postData = (url: string, data: any) => {
   });
 };
 
-const patchData = (url: string, data: any) => {
+const patchData = (url, data) => {
   return new Promise(async (resolve) => {
     try {
       const response = await axios.patch(API_BASE_URL + url, data);
@@ -39,7 +39,7 @@ const patchData = (url: string, data: any) => {
   });
 };
 
-const putData = (url: string, data: any) => {
+const putData = (url, data) => {
   return new Promise(async (resolve) => {
     try {
       const response = await axios.put(API_BASE_URL + url, data);
@@ -50,7 +50,7 @@ const putData = (url: string, data: any) => {
   });
 };
 
-const deleteData = (url: string) => {
+const deleteData = (url) => {
   return new Promise(async (resolve) => {
     try {
       const response = await axios.delete(API_BASE_URL + url);
