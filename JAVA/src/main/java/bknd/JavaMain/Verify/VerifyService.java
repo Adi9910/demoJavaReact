@@ -16,7 +16,7 @@ public class VerifyService {
 
     private final Random random = new Random();
 
-    public void VerifyUserThroughOTP(String email){
+    public String VerifyUserThroughOTP(String email){
 //        String phoneNumber = "+919910282537";
 //        String email = "info9adi@gmail.com";
 
@@ -24,6 +24,7 @@ public class VerifyService {
         String otp = String.valueOf(otpValue);
 //        new Thread(()-> otpServe.optGenerate(otp, phoneNumber)).start();
         new Thread(()-> emailServe.emailGenerate(otp, email)).start();
+        return otp;
     }
 
 }
